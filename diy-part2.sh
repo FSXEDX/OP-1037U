@@ -215,22 +215,22 @@ sed -i 's/解锁网易云灰色歌曲/网易解锁/g' package/lean/luci-app-unbl
 sed -i 's/Docker CE 容器/容器管理/g' package/lean/luci-app-docker/po/zh-cn/docker.po
 
 #kernel-graphics
-#ver=$(cat target/linux/x86/Makefile | grep KERNEL_PATCHVER | cut -d '=' -f2)
-#echo CONFIG_DRM=y >>target/linux/x86/config-${ver}
-#echo CONFIG_DRM_I915=y >>target/linux/x86/config-${ver}
-#echo CONFIG_DRM_I915_ALPHA_SUPPORT=y >>target/linux/x86/config-${ver}
-#echo CONFIG_DRM_I915_CAPTURE_ERROR=y >>target/linux/x86/config-${ver}
-#echo CONFIG_DRM_I915_COMPRESS_ERROR=y >>target/linux/x86/config-${ver}
-#echo CONFIG_DRM_I915_USERPTR=y >>target/linux/x86/config-${ver}
-#echo '# CONFIG_DRM_I915_ALPHA_SUPPORT is not set' >>target/linux/x86/config-${ver}
-#echo '# CONFIG_DRM_I915_GVT is not set' >>target/linux/x86/config-${ver}
-#echo '# DRM_I915_WERROR is not set' >>target/linux/x86/config-${ver}
-#echo '# DRM_I915_DEBUG is not set' >>target/linux/x86/config-${ver}
-#echo '# DRM_I915_SW_FENCE_DEBUG_OBJECTS is not set' >>target/linux/x86/config-${ver}
-#echo '# DRM_I915_SW_FENCE_CHECK_DAG is not set' >>target/linux/x86/config-${ver}
-#echo '# DRM_I915_DEBUG_GUC is not set' >>target/linux/x86/config-${ver}
-#echo '# DRM_I915_LOW_LEVEL_TRACEPOINTS is not set' >>target/linux/x86/config-${ver}
-#echo '# DRM_I915_DEBUG_VBLANK_EVADE is not set' >>target/linux/x86/config-${ver}
+ver=$(cat target/linux/x86/Makefile | grep KERNEL_PATCHVER | cut -d '=' -f2)
+echo CONFIG_DRM=y >>target/linux/x86/config-${ver}
+echo CONFIG_DRM_I915=y >>target/linux/x86/config-${ver}
+echo CONFIG_DRM_I915_ALPHA_SUPPORT=y >>target/linux/x86/config-${ver}
+echo CONFIG_DRM_I915_CAPTURE_ERROR=y >>target/linux/x86/config-${ver}
+echo CONFIG_DRM_I915_COMPRESS_ERROR=y >>target/linux/x86/config-${ver}
+echo CONFIG_DRM_I915_USERPTR=y >>target/linux/x86/config-${ver}
+echo '# CONFIG_DRM_I915_ALPHA_SUPPORT is not set' >>target/linux/x86/config-${ver}
+echo '# CONFIG_DRM_I915_GVT is not set' >>target/linux/x86/config-${ver}
+echo '# DRM_I915_WERROR is not set' >>target/linux/x86/config-${ver}
+echo '# DRM_I915_DEBUG is not set' >>target/linux/x86/config-${ver}
+echo '# DRM_I915_SW_FENCE_DEBUG_OBJECTS is not set' >>target/linux/x86/config-${ver}
+echo '# DRM_I915_SW_FENCE_CHECK_DAG is not set' >>target/linux/x86/config-${ver}
+echo '# DRM_I915_DEBUG_GUC is not set' >>target/linux/x86/config-${ver}
+echo '# DRM_I915_LOW_LEVEL_TRACEPOINTS is not set' >>target/linux/x86/config-${ver}
+echo '# DRM_I915_DEBUG_VBLANK_EVADE is not set' >>target/linux/x86/config-${ver}
 
 #luci-app-udpxy
 sed -i 's/udpxy"))/组播转发"))/g' feeds/luci/applications/luci-app-udpxy/luasrc/controller/udpxy.lua
