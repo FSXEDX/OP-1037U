@@ -129,7 +129,7 @@ sed -i '/hw:depends/d'  package/lean/luci-app-flowoffload/luasrc/model/cbi/flowo
 
 
 #luci-app-SFE
-sed -i 's/SFE 转发加速/硬件加速/g'package/lean/luci-app-sfe/po/zh-cn/sfe.po
+sed -i 's/SFE 转发加速/硬件加速/g' package/lean/luci-app-sfe/po/zh-cn/sfe.po
 sed -i 's/Turbo ACC 网络加速/网络加速/g' package/lean/luci-app-sfe/po/zh-cn/sfe.po
 sed -i 's/启用 SFE Fast Path 加速/启用 SFE/g' package/lean/luci-app-sfe/po/zh-cn/sfe.po
 
