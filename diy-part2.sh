@@ -12,7 +12,7 @@
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
-#luci-app-minidlna
+#luci-app-minidlna 媒体私有云
 cat feeds/luci/applications/luci-app-minidlna/po/zh-cn/minidlna.po | sed ':label;N;s/\n/123456/;b label' >feeds/luci/applications/luci-app-minidlna/po/zh-cn/minidlna.po.tmp
 sed -i 's/"Allow wide links:"123456msgstr ""/"Allow wide links:"123456msgstr "允许广域链接"/g' feeds/luci/applications/luci-app-minidlna/po/zh-cn/minidlna.po.tmp
 sed -i 's/msgid ""123456"Set this to allow serving content outside the media root (via symlinks)."/msgid "Set this to allow serving content outside the media root (via symlinks)."/g' feeds/luci/applications/luci-app-minidlna/po/zh-cn/minidlna.po.tmp
@@ -27,7 +27,7 @@ sed -i 's/msgstr "miniSSDP socket："/msgstr "MiniSSDP Socket："/g' feeds/luci/
 sed -i 's/123456/\n/g' feeds/luci/applications/luci-app-minidlna/po/zh-cn/minidlna.po.tmp
 mv feeds/luci/applications/luci-app-minidlna/po/zh-cn/minidlna.po.tmp feeds/luci/applications/luci-app-minidlna/po/zh-cn/minidlna.po
 
-#luci-app-mwan3
+#luci-app-mwan3 负载均衡
 cat feeds/luci/applications/luci-app-mwan3/po/zh-cn/mwan3.po | sed ':label;N;s/\n/123456/;b label' >feeds/luci/applications/luci-app-mwan3/po/zh-cn/mwan3.po.tmp
 sed -i 's/"Detail"123456msgstr ""/"Detail"123456msgstr "细节"/g' feeds/luci/applications/luci-app-mwan3/po/zh-cn/mwan3.po.tmp
 sed -i 's/"Execute"123456msgstr ""/"Execute"123456msgstr "执行"/g' feeds/luci/applications/luci-app-mwan3/po/zh-cn/mwan3.po.tmp
@@ -57,10 +57,10 @@ sed -i 's/"Waiting for command to complete..."123456msgstr ""/"Waiting for comma
 sed -i 's/123456/\n/g' feeds/luci/applications/luci-app-mwan3/po/zh-cn/mwan3.po.tmp
 mv feeds/luci/applications/luci-app-mwan3/po/zh-cn/mwan3.po.tmp feeds/luci/applications/luci-app-mwan3/po/zh-cn/mwan3.po
 
-#luci-app-mwan3helper
+#luci-app-mwan3helper 设置家庭网络的IPTV
 sed -i 's/MWAN3 分流助手/分流助手/g' package/lean/luci-app-mwan3helper/po/zh-cn/mwan3helper.po
 
-#luci-app-upnp
+#luci-app-upnp 使用UPnP功能
 cat feeds/luci/applications/luci-app-upnp/po/zh-cn/upnp.po |sed ':label;N;s/\n/123456/;b label' >feeds/luci/applications/luci-app-upnp/po/zh-cn/upnp.po.tmp
 sed -i 's/msgstr "UPnP"/msgstr "端口转发"/g' feeds/luci/applications/luci-app-upnp/po/zh-cn/upnp.po.tmp
 sed -i 's/IGDv2"123456msgstr ""/IGDv2"123456msgstr "用IGDv1代替IGDv2设备广播"/g' feeds/luci/applications/luci-app-upnp/po/zh-cn/upnp.po.tmp
@@ -96,7 +96,7 @@ echo "echo '最简单的配置：使用带有HTB过滤器的列队规则来进�
 echo "echo '最简单的配置（TBF）：使用带有TBF过滤器的列队规则来进行速率限制。在某些架构上，TBF可能会比HTB提供更好的性能。' >/usr/lib/sqm/simplest_tbf.qos.help" >>package/lean/default-settings/files/zzz-default-settings
 echo exit 0 >>package/lean/default-settings/files/zzz-default-settings
 
-#luci-app-vsftpd
+#luci-app-vsftpd FTP服务
 sed -i '/NAS/d' package/lean/luci-app-vsftpd/luasrc/controller/vsftpd.lua
 sed -i 's/nas/services/g' package/lean/luci-app-vsftpd/luasrc/controller/vsftpd.lua
 sed -i 's/nas/services/g' package/lean/luci-app-vsftpd/luasrc/model/cbi/vsftpd/item.lua
@@ -105,7 +105,7 @@ sed -i 's/msgid "NAS"//g' package/lean/luci-app-vsftpd/po/zh-cn/vsftpd.po
 sed -i 's/msgstr "网络存储"//g' package/lean/luci-app-vsftpd/po/zh-cn/vsftpd.po
 sed -i 's/msgstr "FTP 服务器"/msgstr "FTP设置"/g' package/lean/luci-app-vsftpd/po/zh-cn/vsftpd.po
 
-#luci-app-amule
+#luci-app-amule 电驴下载工具
 sed -i 's/NAS/SERVICES/g' package/lean/luci-app-amule/luasrc/controller/amule.lua
 sed -i 's/nas/services/g' package/lean/luci-app-amule/luasrc/controller/amule.lua
 sed -i 's/nas/services/g' package/lean/luci-app-amule/luasrc/view/amule/detail_logview.htm
@@ -114,7 +114,7 @@ sed -i 's/nas/services/g' package/lean/luci-app-amule/luasrc/view/amule/webshell
 sed -i 's/aMule设置/电驴设置/g' package/lean/luci-app-amule/po/zh-cn/amule.po
 
 
-#luci-app-flowoffload
+#luci-app-flowoffload 提高路由转发效率
 sed -i 's/Flow Offload 转发加速/硬件加速/g' package/lean/luci-app-flowoffload/po/zh-cn/flowoffload.po
 sed -i 's/Linux Flow offload 转发/Linux Flow OFFload 转发/g' package/lean/luci-app-flowoffload/po/zh-cn/flowoffload.po
 sed -i 's/Linux Flow Offload Forwarding 转发/Linux Flow OFFload 转发/g' package/lean/luci-app-flowoffload/po/zh-cn/flowoffload.po
@@ -128,19 +128,16 @@ sed -i '/hw.description/d'  package/lean/luci-app-flowoffload/luasrc/model/cbi/f
 sed -i '/hw:depends/d'  package/lean/luci-app-flowoffload/luasrc/model/cbi/flowoffload.lua
 
 
-#luci-app-SFE
+#luci-app-SFE转发加速引擎
 sed -i 's/SFE 转发加速/硬件加速/g' package/lean/luci-app-sfe/po/zh-cn/sfe.po
 sed -i 's/Turbo ACC 网络加速/网络加速/g' package/lean/luci-app-sfe/po/zh-cn/sfe.po
 sed -i 's/启用 SFE Fast Path 加速/启用 SFE/g' package/lean/luci-app-sfe/po/zh-cn/sfe.po
 
-#luci-app-vlmcsd
-sed -i 's/KMS 服务器/微软激活/g' package/lean/luci-app-vlmcsd/po/zh-cn/vlmcsd.zh-cn.po
-
-#luci-app-adbyby-plus
+#luci-app-adbyby-plus 广告过滤大师
 sed -i 's/大师 Plus +//g' package/lean/luci-app-adbyby-plus/po/zh-cn/adbyby.po
 sed -i 's/大师 Plus+//g' package/lean/luci-app-adbyby-plus/po/zh-cn/adbyby.po
 
-#luci-app-ssr-plus
+#luci-app-ssr-plus SSR-plus插件
 #git clone https://github.com/fw876/helloworld.git package/lean/luci-app-ssr-plus
 echo "" >> feeds/helloworld/luci-app-ssr-plus/po/zh-cn/ssr-plus.po
 echo 'msgid "ShadowSocksR Plus+"' >> feeds/helloworld/luci-app-ssr-plus/po/zh-cn/ssr-plus.po
@@ -173,37 +170,37 @@ echo "" >> feeds/helloworld/luci-app-ssr-plus/po/zh-cn/ssr-plus.po
 echo 'msgid "Shadowsocks New Version"' >> feeds/helloworld/luci-app-ssr-plus/po/zh-cn/ssr-plus.po
 echo 'msgstr "Shadowsocks"' >> feeds/helloworld/luci-app-ssr-plus/po/zh-cn/ssr-plus.po
 
-#luci-app-SQM QOS
+#luci-app-SQM 流量服务质量(QoS)流控
 sed -i '/创建日志文件/d' feeds/luci/applications/luci-app-sqm/po/zh-cn/sqm.po
 sed -i 's/sqm.log."/sqm.log."\nmsgstr "创建日志"/g' feeds/luci/applications/luci-app-sqm/po/zh-cn/sqm.po
 sed -i 's/日志等级。/日志等级/g' feeds/luci/applications/luci-app-sqm/po/zh-cn/sqm.po
 
-#rc.local
+#rc.local 配置开机执行脚本
 sed -i '$i\amixer sset Master 90%\namixer sset Master unmute\namixer sset PCM unmute\namixer sset PCM 80%\nifconfig eth1 192.168.0.2 netmask 255.255.255.0\niptables -I forwarding_rule -d 192.168.0.1 -j ACCEPT\niptables -t nat -I postrouting_rule -d 192.168.0.1 -j MASQUERADE\nhdparm -S 60 /dev/sdb\n' package/base-files/files/etc/rc.local
 
-#luci-app-arpbind
+#luci-app-arpbind IP/MAC绑定
 echo '' >>package/lean/luci-app-arpbind/po/zh-cn/arpbind.po
 echo 'msgid "MAC Address"' >>package/lean/luci-app-arpbind/po/zh-cn/arpbind.po
 echo 'msgstr "MAC地址"' >>package/lean/luci-app-arpbind/po/zh-cn/arpbind.po
 
-#luci-app-baidupcs-web
+#luci-app-baidupcs-web #百度网盘管理
 sed -i 's/+BaiduPCS-Web //g' package/lean/luci-app-baidupcs-web/Makefile
 sed -i 's/nas/services/g' package/lean/luci-app-baidupcs-web/luasrc/controller/baidupcs-web.lua
 sed -i 's/BaiduPCS Web/百度网盘/g' package/lean/luci-app-baidupcs-web/luasrc/controller/baidupcs-web.lua
 
-#luci-app-verysync
+#luci-app-verysync 微力同步
 sed -i 's/+verysync//g' package/lean/luci-app-verysync/Makefile
 sed -i 's/nas/services/g' package/lean/luci-app-verysync/luasrc/controller/verysync.lua
 
-#luci-app-cifsd
+#luci-app-cifsd CIFS/SMB网络共享
 sed -i 's/nas/services/g' package/lean/luci-app-cifsd/luasrc/controller/cifsd.lua
 sed -i 's/NAS/services/g' package/lean/luci-app-cifsd/luasrc/controller/cifsd.lua
 sed -i 's/ (CIFSD 内核)//g' package/lean/luci-app-cifsd/po/zh-cn/cifsd.po
 
-#luci-app-unblockmusic
+#luci-app-unblockmusic 解锁网易云灰色歌曲3合1新版本
 sed -i 's/解锁网易云灰色歌曲/网易解锁/g' package/lean/luci-app-unblockmusic/po/zh-cn/unblockmusic.po
 
-#luci-app-dockerman
+#luci-app-dockerman Docker容器
 sed -i 's/Docker CE 容器/容器管理/g' package/lean/luci-app-docker/po/zh-cn/docker.po
 
 #kernel-graphics
@@ -224,7 +221,7 @@ sed -i 's/Docker CE 容器/容器管理/g' package/lean/luci-app-docker/po/zh-cn
 #echo '# DRM_I915_LOW_LEVEL_TRACEPOINTS is not set' >>target/linux/x86/config-${ver}
 #echo '# DRM_I915_DEBUG_VBLANK_EVADE is not set' >>target/linux/x86/config-${ver}
 
-#luci-app-udpxy
+#luci-app-udpxy udpxy做组播服务器
 sed -i 's/udpxy"))/组播转发"))/g' feeds/luci/applications/luci-app-udpxy/luasrc/controller/udpxy.lua
 sed -i 's/udpxy is a UDP-to-HTTP multicast traffic relay daemon, here you can configure the settings./UDPXY是UDP到HTTP的组播流量中继守护程序，您可以在此处配置设置。/g' feeds/luci/applications/luci-app-udpxy/luasrc/model/cbi/udpxy.lua
 sed -i 's/Respawn/刷新/g' feeds/luci/applications/luci-app-udpxy/luasrc/model/cbi/udpxy.lua
