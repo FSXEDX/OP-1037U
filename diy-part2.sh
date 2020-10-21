@@ -8,8 +8,8 @@
 #Lienol-APP
 #git clone https://github.com/Lienol/openwrt-package.git package/lienol
 
-#luci-theme-argon
-rm -rf package/lean/luci-theme-argon  
+#添加新主题
+rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
 #luci-app-minidlna
