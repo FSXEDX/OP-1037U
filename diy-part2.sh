@@ -9,7 +9,7 @@
 #git clone https://github.com/Lienol/openwrt-package.git package/lienol
 
 # Modify default IP
-sed -i 's/192.168.1.1/10.77.77.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.77.7.1/g' package/base-files/files/bin/config_generate
 #添加新主题
 rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
