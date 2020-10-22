@@ -177,9 +177,6 @@ sed -i '/创建日志文件/d' feeds/luci/applications/luci-app-sqm/po/zh-cn/sqm
 sed -i 's/sqm.log."/sqm.log."\nmsgstr "创建日志"/g' feeds/luci/applications/luci-app-sqm/po/zh-cn/sqm.po
 sed -i 's/日志等级。/日志等级/g' feeds/luci/applications/luci-app-sqm/po/zh-cn/sqm.po
 
-#rc.local 配置开机执行脚本
-sed -i '$i\amixer sset Master 90%\namixer sset Master unmute\namixer sset PCM unmute\namixer sset PCM 80%\nifconfig eth1 192.168.0.2 netmask 255.255.255.0\niptables -I forwarding_rule -d 192.168.0.1 -j ACCEPT\niptables -t nat -I postrouting_rule -d 192.168.0.1 -j MASQUERADE\nhdparm -S 60 /dev/sdb\n' package/base-files/files/etc/rc.local
-
 #luci-app-arpbind IP/MAC绑定
 echo '' >>package/lean/luci-app-arpbind/po/zh-cn/arpbind.po
 echo 'msgid "MAC Address"' >>package/lean/luci-app-arpbind/po/zh-cn/arpbind.po
